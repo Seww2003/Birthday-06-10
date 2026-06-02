@@ -1,211 +1,211 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Birthday My Love ❤️</title>
-    <style>
-        /* --- Global Styles & Reset --- */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday My Love ❤️</title>
+    <style>
+        /* --- Global Styles & Reset --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
 
-        html {
-            scroll-behavior: smooth;
-        }
+        html {
+            scroll-behavior: smooth;
+        }
 
-        body {
-            background: linear-gradient(135deg, #ffe5ec, #ffc2d1, #f9bec7, #f7aef8, #b388ff);
-            background-size: 400% 400%;
-            animation: gradientBG 20s ease infinite;
-            color: #4a4a4a;
-            overflow-x: hidden;
-            position: relative;
-            min-height: 100vh;
-        }
+        body {
+            background: linear-gradient(135deg, #ffe5ec, #ffc2d1, #f9bec7, #f7aef8, #b388ff);
+            background-size: 400% 400%;
+            animation: gradientBG 20s ease infinite;
+            color: #4a4a4a;
+            overflow-x: hidden;
+            position: relative;
+            min-height: 100vh;
+        }
 
-        @keyframes gradientBG {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
 
-        /* --- Background Decorations --- */
-        #bg-particles {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            pointer-events: none;
-            z-index: 0;
-        }
+        /* --- Background Decorations --- */
+        #bg-particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            z-index: 0;
+        }
 
-        #heart-container {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 1;
-        }
+        #heart-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
 
-        .floating-heart {
-            position: absolute;
-            bottom: -50px;
-            color: rgba(255, 105, 180, 0.6);
-            font-size: 24px;
-            animation: floatUp 6s linear infinite;
-        }
+        .floating-heart {
+            position: absolute;
+            bottom: -50px;
+            color: rgba(255, 105, 180, 0.6);
+            font-size: 24px;
+            animation: floatUp 6s linear infinite;
+        }
 
-        @keyframes floatUp {
-            0% {
-                transform: translateY(0) translateX(0) rotate(0deg);
-                opacity: 1;
-            }
-            100% {
-                transform: translateY(-105vh) translateX(100px) rotate(360deg);
-                opacity: 0;
-            }
-        }
+        @keyframes floatUp {
+            0% {
+                transform: translateY(0) translateX(0) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-105vh) translateX(100px) rotate(360deg);
+                opacity: 0;
+            }
+        }
 
-        .sparkle {
-            position: absolute;
-            background: #fff;
-            border-radius: 50%;
-            animation: twinkle 2s infinite ease-in-out;
-            pointer-events: none;
-        }
+        .sparkle {
+            position: absolute;
+            background: #fff;
+            border-radius: 50%;
+            animation: twinkle 2s infinite ease-in-out;
+            pointer-events: none;
+        }
 
-        @keyframes twinkle {
-            0%, 100% { opacity: 0; transform: scale(0.5); }
-            50% { opacity: 1; transform: scale(1.2); }
-        }
+        @keyframes twinkle {
+            0%, 100% { opacity: 0; transform: scale(0.5); }
+            50% { opacity: 1; transform: scale(1.2); }
+        }
 
-        /* --- Layout Elements --- */
-        section {
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 40px 20px;
-            position: relative;
-            z-index: 2;
-        }
+        /* --- Layout Elements --- */
+        section {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
+            position: relative;
+            z-index: 2;
+        }
 
-        .hidden {
-            display: none !important;
-        }
+        .hidden {
+            display: none !important;
+        }
 
-        /* --- Glassmorphism Cards --- */
-        .glass-card {
-            background: rgba(255, 255, 255, 0.25);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.4);
-            border-radius: 24px;
-            padding: 40px;
-            box-shadow: 0 8px 32px 0 rgba(255, 154, 162, 0.3);
-            text-align: center;
-            max-width: 600px;
-            width: 100%;
-            transition: transform 0.3s ease;
-        }
+        /* --- Glassmorphism Cards --- */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.25);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            border-radius: 24px;
+            padding: 40px;
+            box-shadow: 0 8px 32px 0 rgba(255, 154, 162, 0.3);
+            text-align: center;
+            max-width: 600px;
+            width: 100%;
+            transition: transform 0.3s ease;
+        }
 
-        /* --- Typography & Animations --- */
-        h1, h2 {
-            color: #ff4d6d;
-            margin-bottom: 20px;
-        }
+        /* --- Typography & Animations --- */
+        h1, h2 {
+            color: #ff4d6d;
+            margin-bottom: 20px;
+        }
 
-        h2 {
-            font-size: 2rem;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.05);
-        }
+        h2 {
+            font-size: 2rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
 
-        .pulse-glow {
-            font-size: 3rem;
-            animation: pulseGlow 2.5s ease-in-out infinite;
-            text-shadow: 0 0 10px rgba(255, 77, 109, 0.4);
-        }
+        .pulse-glow {
+            font-size: 3rem;
+            animation: pulseGlow 2.5s ease-in-out infinite;
+            text-shadow: 0 0 10px rgba(255, 77, 109, 0.4);
+        }
 
-        @keyframes pulseGlow {
-            0%, 100% { transform: scale(1); text-shadow: 0 0 10px rgba(255,77,109,0.4); }
-            50% { transform: scale(1.05); text-shadow: 0 0 25px rgba(255,77,109,0.8); }
-        }
+        @keyframes pulseGlow {
+            0%, 100% { transform: scale(1); text-shadow: 0 0 10px rgba(255,77,109,0.4); }
+            50% { transform: scale(1.05); text-shadow: 0 0 25px rgba(255,77,109,0.8); }
+        }
 
-        .sub-text {
-            font-size: 1.3rem;
-            font-weight: 500;
-            color: #7209b7;
-            margin-bottom: 30px;
-        }
+        .sub-text {
+            font-size: 1.3rem;
+            font-weight: 500;
+            color: #7209b7;
+            margin-bottom: 30px;
+        }
 
-        .heartbeat-text {
-            font-size: 4rem;
-            color: #ff0054;
-            animation: heartbeat 1.2s infinite;
-        }
+        .heartbeat-text {
+            font-size: 4rem;
+            color: #ff0054;
+            animation: heartbeat 1.2s infinite;
+        }
 
-        @keyframes heartbeat {
-            0%, 20%, 40%, 60%, 80%, 100% { transform: scale(1); }
-            10%, 30% { transform: scale(1.15); }
-        }
+        @keyframes heartbeat {
+            0%, 20%, 40%, 60%, 80%, 100% { transform: scale(1); }
+            10%, 30% { transform: scale(1.15); }
+        }
 
-        /* --- Buttons --- */
-        .btn-primary {
-            background: linear-gradient(45deg, #ff4d6d, #ff758f);
-            color: #fff;
-            border: none;
-            padding: 15px 35px;
-            font-size: 1.1rem;
-            font-weight: bold;
-            border-radius: 50px;
-            cursor: pointer;
-            box-shadow: 0 5px 15px rgba(255, 77, 109, 0.4);
-            transition: all 0.3s ease;
-        }
+        /* --- Buttons --- */
+        .btn-primary {
+            background: linear-gradient(45deg, #ff4d6d, #ff758f);
+            color: #fff;
+            border: none;
+            padding: 15px 35px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(255, 77, 109, 0.4);
+            transition: all 0.3s ease;
+        }
 
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(255, 77, 109, 0.6);
-        }
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(255, 77, 109, 0.6);
+        }
 
-        .bounce-hover:hover {
-            animation: bounce 0.5s ease infinite alternate;
-        }
+        .bounce-hover:hover {
+            animation: bounce 0.5s ease infinite alternate;
+        }
 
-        @keyframes bounce {
-            from { transform: translateY(0); }
-            to { transform: translateY(-6px); }
-        }
+        @keyframes bounce {
+            from { transform: translateY(0); }
+            to { transform: translateY(-6px); }
+        }
 
-        .music-btn {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            z-index: 100;
-            background: rgba(255, 255, 255, 0.7);
-            border: 1px solid rgba(255,255,255,0.5);
-            padding: 10px 15px;
-            border-radius: 20px;
-            font-weight: bold;
-            cursor: pointer;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        }
+        .music-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 100;
+            background: rgba(255, 255, 255, 0.7);
+            border: 1px solid rgba(255,255,255,0.5);
+            padding: 10px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
 
-        /* --- Memory Gallery --- */
-        .gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
-    width: 100%;
-    max-width: 1200px;
+        /* --- Memory Gallery --- */
+        .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
 }
 
 .gallery-card {
@@ -222,11 +222,11 @@ height: 100%;
 }
 
 .gallery-card img {
-    width: 100%;
-    height: auto;
-    display: block;
-    object-fit: contain;
-    max-height: 500px;
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+    max-height: 500px;
 }
 
 
@@ -249,648 +249,666 @@ box-shadow: 0 15px 30px rgba(255, 77, 109, 0.3);
 }
 
 
-        /* --- Lightbox --- */
-        .lightbox {
-            display: none;
-            position: fixed;
-            z-index: 200;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(0,0,0,0.85);
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            padding: 20px;
-        }
+        /* --- Lightbox --- */
+        .lightbox {
+            display: none;
+            position: fixed;
+            z-index: 200;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.85);
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 20px;
+        }
 
-        .lightbox img {
-            max-width: 90%;
-            max-height: 70vh;
-            border-radius: 10px;
-            box-shadow: 0 0 25px rgba(255,255,255,0.2);
-        }
+        .lightbox img {
+            max-width: 90%;
+            max-height: 70vh;
+            border-radius: 10px;
+            box-shadow: 0 0 25px rgba(255,255,255,0.2);
+        }
 
-        .lightbox p {
-            color: #fff;
-            margin-top: 15px;
-            font-size: 1.2rem;
-            text-align: center;
-            max-width: 600px;
-        }
+        .lightbox p {
+            color: #fff;
+            margin-top: 15px;
+            font-size: 1.2rem;
+            text-align: center;
+            max-width: 600px;
+        }
 
-        .close-lightbox {
-            position: absolute;
-            top: 30px; right: 40px;
-            color: white; font-size: 40px; cursor: pointer;
-        }
+        .close-lightbox {
+            position: absolute;
+            top: 30px; right: 40px;
+            color: white; font-size: 40px; cursor: pointer;
+        }
 
-        /* --- Love Message Section --- */
-        .letter-card {
-            min-height: 250px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
+        /* --- Love Message Section --- */
+        .letter-card {
+            min-height: 250px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
 
-        .typewriter-text {
-            font-size: 1.2rem;
-            line-height: 1.6;
-            font-style: italic;
-            white-space: pre-line;
-        }
+        .typewriter-text {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            font-style: italic;
+            white-space: pre-line;
+        }
 
-        /* --- Mini Game Section --- */
-        .game-card {
-            max-width: 500px;
-        }
-        .game-instructions {
-            font-size: 0.9rem;
-            margin-bottom: 15px;
-            color: #666;
-        }
-        .game-stats {
-            display: flex;
-            justify-content: space-between;
-            font-weight: bold;
-            font-size: 1.2rem;
-            margin-bottom: 10px;
-            color: #7209b7;
-        }
+        /* --- Mini Game Section --- */
+        .game-card {
+            max-width: 500px;
+        }
+        .game-instructions {
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+            color: #666;
+        }
+        .game-stats {
+            display: flex;
+            justify-content: space-between;
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: #7209b7;
+        }
 
-        #game-container {
-            width: 100%;
-            height: 350px;
-            background: rgba(255, 255, 255, 0.4);
-            border-radius: 15px;
-            position: relative;
-            overflow: hidden;
-            border: 2px dashed rgba(255, 77, 109, 0.4);
-            margin-bottom: 15px;
-        }
+        #game-container {
+            width: 100%;
+            height: 350px;
+            background: rgba(255, 255, 255, 0.4);
+            border-radius: 15px;
+            position: relative;
+            overflow: hidden;
+            border: 2px dashed rgba(255, 77, 109, 0.4);
+            margin-bottom: 15px;
+        }
 
-        #basket {
-            position: absolute;
-            bottom: 10px;
-            left: 50%;
-            transform: translateX(-50%);
-            font-size: 40px;
-            width: 60px;
-            height: 50px;
-            text-align: center;
-            cursor: pointer;
-            touch-action: none;
-        }
+        #basket {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 40px;
+            width: 60px;
+            height: 50px;
+            text-align: center;
+            cursor: pointer;
+            touch-action: none;
+        }
 
-        .falling-heart {
-            position: absolute;
-            font-size: 28px;
-            user-select: none;
-        }
+        .falling-heart {
+            position: absolute;
+            font-size: 28px;
+            user-select: none;
+        }
 
-        .game-message {
-            margin-top: 15px;
-            font-weight: bold;
-            font-size: 1.2rem;
-            color: #ff0054;
-        }
+        .game-message {
+            margin-top: 15px;
+            font-weight: bold;
+            font-size: 1.2rem;
+            color: #ff0054;
+        }
 
-        /* --- Modals --- */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 300;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(0,0,0,0.4);
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-        }
+        /* --- Modals --- */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 300;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.4);
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
 
-        .modal-content {
-            background: rgba(255, 255, 255, 0.85);
-            position: relative;
-            animation: modalPop 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        }
+        .modal-content {
+            background: rgba(255, 255, 255, 0.85);
+            position: relative;
+            animation: modalPop 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
 
-        @keyframes modalPop {
-            from { transform: scale(0.7); opacity: 0; }
-            to { transform: scale(1); opacity: 1; }
-        }
+        @keyframes modalPop {
+            from { transform: scale(0.7); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
 
-        .close-modal {
-            position: absolute;
-            top: 15px; right: 20px;
-            font-size: 30px; cursor: pointer; color: #aaa;
-        }
-        .close-modal:hover { color: #333; }
+        .close-modal {
+            position: absolute;
+            top: 15px; right: 20px;
+            font-size: 30px; cursor: pointer; color: #aaa;
+        }
+        .close-modal:hover { color: #333; }
 
-        .signature {
-            margin-top: 20px;
-            font-weight: bold;
-            text-align: right;
-            color: #ff4d6d;
-        }
+        .signature {
+            margin-top: 20px;
+            font-weight: bold;
+            text-align: right;
+            color: #ff4d6d;
+        }
 
-        /* --- Scroll Fade-in --- */
-        .fade-in {
-    opacity: 1 !important;
-    transform: translateY(0) !important;
-    transition: opacity 1s ease, transform 1s ease;
+        /* --- Scroll Fade-in --- */
+        .fade-in {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+    transition: opacity 1s ease, transform 1s ease;
 }
 
 .fade-in.appear {
-    opacity: 1;
-    transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
 }
 
-        /* --- Confetti Canvas --- */
-        #confetti-canvas {
-            position: fixed;
-            top: 0; left: 0;
-            width: 100vw; height: 100vh;
-            pointer-events: none;
-            z-index: 99;
-        }
+        /* --- Confetti Canvas --- */
+        #confetti-canvas {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100vw; height: 100vh;
+            pointer-events: none;
+            z-index: 99;
+        }
 
-        /* --- Responsiveness --- */
-        @media (max-width: 600px) {
-            .pulse-glow { font-size: 2.2rem; }
-            .heartbeat-text { font-size: 2.8rem; }
-            .glass-card { padding: 25px 15px; }
-            section { padding: 20px 10px; }
-        }
-        .lightbox {
-    display: none;
-    position: fixed;
-    z-index: 9999;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.9);
-    justify-content: center;
-    align-items: center;
+        /* --- Responsiveness --- */
+        @media (max-width: 600px) {
+            .pulse-glow { font-size: 2.2rem; }
+            .heartbeat-text { font-size: 2.8rem; }
+            .glass-card { padding: 25px 15px; }
+            section { padding: 20px 10px; }
+        }
+        @media screen and (max-width: 768px) {
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-card {
+        width: 100%;
+    }
+
+    .gallery-card img {
+        width: 100%;
+        height: auto !important;
+        max-height: none !important;
+        object-fit: contain;
+    }
+}
+        .lightbox {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+    justify-content: center;
+    align-items: center;
 }
 
 .lightbox-content video {
-    width: 90%;
-    max-height: 90vh;
-    border-radius: 10px;
+    width: 90%;
+    max-height: 90vh;
+    border-radius: 10px;
 }
-    </style>
+    </style>
 </head>
 <body>
 
-    <div id="bg-particles"></div>
-    <div id="heart-container"></div>
+    <div id="bg-particles"></div>
+    <div id="heart-container"></div>
 
-    <button id="music-toggle" class="music-btn">🎵 ON</button>
-    <audio id="bg-music" loop>
-        <source src="liqwyd-birthday(chosic.com).mp3" type="audio/mpeg">
-    </audio>
+    <button id="music-toggle" class="music-btn">🎵 ON</button>
+    <audio id="bg-music" loop>
+        <source src="liqwyd-birthday(chosic.com).mp3" type="audio/mpeg">
+    </audio>
 
-    <section id="landing" class="active-section">
-        <div class="glass-card landing-card">
-            <h1 class="pulse-glow">Happy Birthday My Love ❤️</h1>
-            <p class="sub-text">June 10 – Your Special Day</p>
-            <button id="start-btn" class="btn-primary bounce-hover">Start Surprise 💖</button>
-        </div>
-    </section>
+    <section id="landing" class="active-section">
+        <div class="glass-card landing-card">
+            <h1 class="pulse-glow">Happy Birthday My Love ❤️</h1>
+            <p class="sub-text">June 10 – Your Special Day</p>
+            <button id="start-btn" class="btn-primary bounce-hover">Start Surprise 💖</button>
+        </div>
+    </section>
 
-    <div id="main-content" class="hidden">
+    <div id="main-content" class="hidden">
 
-        <section id="gallery" class="fade-in">
-            <h2>🌸 Our Beautiful Memories</h2>
-        
-            <div class="gallery-grid">
-                <div class="gallery-card" onclick="openLightbox('f1.jpg', 'The day we laughed until our stomachs hurt! 🥰')">
-                    <img src="first.jpeg" alt="Memory 1">
-                    <div class="caption">Our First Date ✨</div>
-                </div>
-                <div class="gallery-card" onclick="openLightbox('s2.jpg', 'Every moment with you is like a sweet dream. 🌙')">
-                    <img src="s1.jpeg" alt="Memory 2">
-                    <div class="caption">Tiny Moments, Endless Happiness 🌸 </div>
-                </div>
-                <div class="gallery-card" onclick="openLightbox('t1.jpg', '💖 Forever Isn t Long Enough With You')">
-                    <img src="t2.jpeg" alt="Memory 3">
-                    <div class="caption">Moments That Feel Like Magic 🦋</div>
-                </div>
-                <!-- Video Card 1 -->
+        <section id="gallery" class="fade-in">
+            <h2>🌸 Our Beautiful Memories</h2>
+        
+            <div class="gallery-grid">
+                <div class="gallery-card" onclick="openLightbox('f1.jpg', 'The day we laughed until our stomachs hurt! 🥰')">
+                    <img src="first.jpeg" alt="Memory 1">
+                    <div class="caption">Our First Date ✨</div>
+                </div>
+                <div class="gallery-card" onclick="openLightbox('s2.jpg', 'Every moment with you is like a sweet dream. 🌙')">
+                    <img src="s1.jpeg" alt="Memory 2">
+                    <div class="caption">Tiny Moments, Endless Happiness 🌸 </div>
+                </div>
+                <div class="gallery-card" onclick="openLightbox('t1.jpg', '💖 Forever Isn t Long Enough With You')">
+                    <img src="t2.jpeg" alt="Memory 3">
+                    <div class="caption">Moments That Feel Like Magic 🦋</div>
+                </div>
+                <!-- Video Card 1 -->
 <div class="gallery-card"
-     onclick="openVideoLightbox('v1.mp4')">
-    <img src="vimg1.jpeg" alt="Video 1" 
-         style=" width:100%; height:auto; max-height:500px; object-fit:contain; display:block;">
-        <div class="caption">🥺 Falling for You Again and Again</div>
-            </div>
-                <div class="gallery-card"
-     onclick="openLightbox('f02.jpg', '🌹 A Love Story Written by Fate')">
-    <img src="f01.jpeg"
-         alt="Memory 6"
-         style="width:100%; height:auto; max-height:500px; object-fit:contain; display:block;">
-    <div class="caption">Forever My Favorite Person 💖</div>
+     onclick="openVideoLightbox('v1.mp4')">
+    <img src="vimg1.jpeg" alt="Video 1" 
+         style=" width:100%; height:auto; max-height:500px; object-fit:contain; display:block;">
+        <div class="caption">🥺 Falling for You Again and Again</div>
+            </div>
+                <div class="gallery-card"
+     onclick="openLightbox('f02.jpg', '🌹 A Love Story Written by Fate')">
+    <img src="f01.jpeg"
+         alt="Memory 6"
+         style="width:100%; height:auto; max-height:500px; object-fit:contain; display:block;">
+    <div class="caption">Forever My Favorite Person 💖</div>
 </div>
-                <div class="gallery-card"
-     onclick="openLightbox('5-2.jpg', '🌹 A Love Story Written by Fate')">
-    <img src="5-1.jpeg"
-         alt="Memory 6"
-         style="width:100%; height:auto; max-height:500px; object-fit:contain; display:block;">
-    <div class="caption">Forever My Favorite Person 💖</div>
+                <div class="gallery-card"
+     onclick="openLightbox('5-2.jpg', '🌹 A Love Story Written by Fate')">
+    <img src="5-1.jpeg"
+         alt="Memory 6"
+         style="width:100%; height:auto; max-height:500px; object-fit:contain; display:block;">
+    <div class="caption">Forever My Favorite Person 💖</div>
 </div>
-                <div class="gallery-card"
-     onclick="openLightbox('6-2.jpg', '🌹 A Love Story Written by Fate')">
-    <img src="6-1.jpeg"
-         alt="Memory 6"
-         style="width:100%; height:auto; max-height:500px; object-fit:contain; display:block;">
-    <div class="caption">Forever My Favorite Person 💖</div>
+                <div class="gallery-card"
+     onclick="openLightbox('6-2.jpg', '🌹 A Love Story Written by Fate')">
+    <img src="6-1.jpeg"
+         alt="Memory 6"
+         style="width:100%; height:auto; max-height:500px; object-fit:contain; display:block;">
+    <div class="caption">Forever My Favorite Person 💖</div>
 </div>
 
 <div class="gallery-card"
-     onclick="openLightbox('7-2.jpg', '💍 You, Me & A Lifetime of Memories')">
-    <img src="7-1.jpeg"
-         alt="Memory 7"
-         style="width:100%; height:auto; max-height:500px; object-fit:contain; display:block;">
-    <div class="caption">Every Picture Holds a Thousand Feelings 📸</div>
+     onclick="openLightbox('7-2.jpg', '💍 You, Me & A Lifetime of Memories')">
+    <img src="7-1.jpeg"
+         alt="Memory 7"
+         style="width:100%; height:auto; max-height:500px; object-fit:contain; display:block;">
+    <div class="caption">Every Picture Holds a Thousand Feelings 📸</div>
 </div>
 <!-- Video Card 2 -->
 <div class="gallery-card"
-     onclick="openVideoLightbox('v2.MOV')">
-    <img src="vimg2.jpeg" alt="Video 2"
-         style="width:100%; height:auto; max-height:500px; object-fit:contain; display:block;">
-    <div class="caption">Special Memories 💖</div>
+     onclick="openVideoLightbox('v2.MOV')">
+    <img src="vimg2.jpeg" alt="Video 2"
+         style="width:100%; height:auto; max-height:500px; object-fit:contain; display:block;">
+    <div class="caption">Special Memories 💖</div>
 </div>
-            </div>
-        </section>
+            </div>
+        </section>
 
-        <section id="love-letter" class="fade-in">
-            <div class="glass-card letter-card">
-                <h2>💌 A Message For You</h2>
-                <div id="typewriter" class="typewriter-text"></div>
-            </div>
-        </section>
+        <section id="love-letter" class="fade-in">
+            <div class="glass-card letter-card">
+                <h2>💌 A Message For You</h2>
+                <div id="typewriter" class="typewriter-text"></div>
+            </div>
+        </section>
 
-        <section id="mini-game" class="fade-in">
-            <div class="glass-card game-card">
-                <h2>🎮 Catch the Hearts Game 💕</h2>
-                <p class="game-instructions">Use Left/Right Arrows or Touch/Drag at the bottom to move the basket!</p>
-                
-                <div class="game-stats">
-                    <div>Score: <span id="score">0</span></div>
-                    <div>Time Left: <span id="timer">30</span>s</div>
-                </div>
+        <section id="mini-game" class="fade-in">
+            <div class="glass-card game-card">
+                <h2>🎮 Catch the Hearts Game 💕</h2>
+                <p class="game-instructions">Use Left/Right Arrows or Touch/Drag at the bottom to move the basket!</p>
+                
+                <div class="game-stats">
+                    <div>Score: <span id="score">0</span></div>
+                    <div>Time Left: <span id="timer">30</span>s</div>
+                </div>
 
-                <div id="game-container">
-                    <div id="basket">🧺</div>
-                </div>
+                <div id="game-container">
+                    <div id="basket">🧺</div>
+                </div>
 
-                <button id="game-start-btn" class="btn-primary">Start Game 🚀</button>
-                <div id="game-message" class="game-message"></div>
-            </div>
-        </section>
+                <button id="game-start-btn" class="btn-primary">Start Game 🚀</button>
+                <div id="game-message" class="game-message"></div>
+            </div>
+        </section>
 
-        <section id="final-surprise" class="fade-in">
-            <h1 class="heartbeat-text">I LOVE YOU ❤️</h1>
-            <button id="surprise-popup-btn" class="btn-primary bounce-hover">Click for Surprise 💌</button>
-        </section>
+        <section id="final-surprise" class="fade-in">
+            <h1 class="heartbeat-text">I LOVE YOU ❤️</h1>
+            <button id="surprise-popup-btn" class="btn-primary bounce-hover">Click for Surprise 💌</button>
+        </section>
 
-    </div>
+    </div>
 
-    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
-        <span class="close-lightbox">&times;</span>
-        <img id="lightbox-img" src="" alt="Enlarged view">
-        <p id="lightbox-caption"></p>
-    </div>
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <span class="close-lightbox">&times;</span>
+        <img id="lightbox-img" src="" alt="Enlarged view">
+        <p id="lightbox-caption"></p>
+    </div>
 
-    <div id="surprise-modal" class="modal">
-        <div class="glass-card modal-content">
-            <span class="close-modal" onclick="closeModal()">&times;</span>
-            <h2>To My Whole Universe 🌌</h2>
-            <p>Happy Birthday! Thank you for being the most incredible person in my life. You bring so much light, laughter, and comfort into my world every single day. I hope this little digital corner reminds you just how deeply adored you are. Today and every day, I celebrate you! 🎂✨🎉</p>
-            <p class="signature">Forever & Always, Me 💖</p>
-        </div>
-    </div>
+    <div id="surprise-modal" class="modal">
+        <div class="glass-card modal-content">
+            <span class="close-modal" onclick="closeModal()">&times;</span>
+            <h2>To My Whole Universe 🌌</h2>
+            <p>Happy Birthday! Thank you for being the most incredible person in my life. You bring so much light, laughter, and comfort into my world every single day. I hope this little digital corner reminds you just how deeply adored you are. Today and every day, I celebrate you! 🎂✨🎉</p>
+            <p class="signature">Forever & Always, Me 💖</p>
+        </div>
+    </div>
 
-    <canvas id="confetti-canvas"></canvas>
+    <canvas id="confetti-canvas"></canvas>
 
-    <script>
-        // --- Global Elements & State ---
-        const bgMusic = document.getElementById('bg-music');
-        const musicToggle = document.getElementById('music-toggle');
-        const startBtn = document.getElementById('start-btn');
-        const mainContent = document.getElementById('main-content');
-        const heartContainer = document.getElementById('heart-container');
-        const bgParticles = document.getElementById('bg-particles');
+    <script>
+        // --- Global Elements & State ---
+        const bgMusic = document.getElementById('bg-music');
+        const musicToggle = document.getElementById('music-toggle');
+        const startBtn = document.getElementById('start-btn');
+        const mainContent = document.getElementById('main-content');
+        const heartContainer = document.getElementById('heart-container');
+        const bgParticles = document.getElementById('bg-particles');
 
-        let musicPlaying = false;
+        let musicPlaying = false;
 
-        // --- Background Decorations & Generators ---
-        function createFloatingHeart() {
-            const heart = document.createElement('div');
-            heart.classList.add('floating-heart');
-            heart.innerHTML = ['❤️', '💖', '💕', '💗', '💝'][Math.floor(Math.random() * 5)];
-            heart.style.left = Math.random() * 100 + 'vw';
-            heart.style.fontSize = Math.random() * 20 + 15 + 'px';
-            heart.style.animationDuration = Math.random() * 3 + 4 + 's'; 
-            heartContainer.appendChild(heart);
-            
-            setTimeout(() => { heart.remove(); }, 7000);
-        }
-        setInterval(createFloatingHeart, 400);
+        // --- Background Decorations & Generators ---
+        function createFloatingHeart() {
+            const heart = document.createElement('div');
+            heart.classList.add('floating-heart');
+            heart.innerHTML = ['❤️', '💖', '💕', '💗', '💝'][Math.floor(Math.random() * 5)];
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.fontSize = Math.random() * 20 + 15 + 'px';
+            heart.style.animationDuration = Math.random() * 3 + 4 + 's'; 
+            heartContainer.appendChild(heart);
+            
+            setTimeout(() => { heart.remove(); }, 7000);
+        }
+        setInterval(createFloatingHeart, 400);
 
-        function createSparkles() {
-            for (let i = 0; i < 40; i++) {
-                const sparkle = document.createElement('div');
-                sparkle.classList.add('sparkle');
-                sparkle.style.width = sparkle.style.height = Math.random() * 5 + 2 + 'px';
-                sparkle.style.top = Math.random() * 100 + 'vh';
-                sparkle.style.left = Math.random() * 100 + 'vw';
-                sparkle.style.animationDelay = Math.random() * 2 + 's';
-                bgParticles.appendChild(sparkle);
-            }
-        }
-        createSparkles();
+        function createSparkles() {
+            for (let i = 0; i < 40; i++) {
+                const sparkle = document.createElement('div');
+                sparkle.classList.add('sparkle');
+                sparkle.style.width = sparkle.style.height = Math.random() * 5 + 2 + 'px';
+                sparkle.style.top = Math.random() * 100 + 'vh';
+                sparkle.style.left = Math.random() * 100 + 'vw';
+                sparkle.style.animationDelay = Math.random() * 2 + 's';
+                bgParticles.appendChild(sparkle);
+            }
+        }
+        createSparkles();
 
-        // --- Audio Controller ---
-        musicToggle.addEventListener('click', () => {
-            if (musicPlaying) {
-                bgMusic.pause();
-                musicToggle.innerText = "🎵 OFF";
-            } else {
-                bgMusic.play().catch(err => console.log("Audio block context: ", err));
-                musicToggle.innerText = "🎵 ON";
-            }
-            musicPlaying = !musicPlaying;
-        });
+        // --- Audio Controller ---
+        musicToggle.addEventListener('click', () => {
+            if (musicPlaying) {
+                bgMusic.pause();
+                musicToggle.innerText = "🎵 OFF";
+            } else {
+                bgMusic.play().catch(err => console.log("Audio block context: ", err));
+                musicToggle.innerText = "🎵 ON";
+            }
+            musicPlaying = !musicPlaying;
+        });
 
-        // --- Experience Init / Confetti Trigger ---
-        startBtn.addEventListener('click', () => {
-            bgMusic.play().then(() => { musicPlaying = true; musicToggle.innerText = "🎵 ON"; })
-                   .catch(() => { console.log("Autoplay context handled via interaction."); });
+        // --- Experience Init / Confetti Trigger ---
+        startBtn.addEventListener('click', () => {
+            bgMusic.play().then(() => { musicPlaying = true; musicToggle.innerText = "🎵 ON"; })
+                   .catch(() => { console.log("Autoplay context handled via interaction."); });
 
-            mainContent.classList.remove('hidden');
-            document.getElementById('gallery').scrollIntoView({ behavior: 'smooth' });
-            
-            startConfetti();
-            startTypewriter();
-            initScrollAnimation();
-        });
+            mainContent.classList.remove('hidden');
+            document.getElementById('gallery').scrollIntoView({ behavior: 'smooth' });
+            
+            startConfetti();
+            startTypewriter();
+            initScrollAnimation();
+        });
 
-        // --- Scroll Reveal Logic ---
-        function initScrollAnimation() {
-            const Faders = document.querySelectorAll('.fade-in');
-            const appearOptions = { threshold: 0.15, rootMargin: "0px 0px -50px 0px" };
-            
-            const appearOnScroll = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if(entry.isIntersecting){
-                        entry.target.classList.add('appear');
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, appearOptions);
+        // --- Scroll Reveal Logic ---
+        function initScrollAnimation() {
+            const Faders = document.querySelectorAll('.fade-in');
+            const appearOptions = { threshold: 0.15, rootMargin: "0px 0px -50px 0px" };
+            
+            const appearOnScroll = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if(entry.isIntersecting){
+                        entry.target.classList.add('appear');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, appearOptions);
 
-            Faders.forEach(fader => appearOnScroll.observe(fader));
-        }
+            Faders.forEach(fader => appearOnScroll.observe(fader));
+        }
 
-        // --- Lightbox Logic ---
-        function openLightbox(src, caption) {
-            document.getElementById('lightbox-img').src = src;
-            document.getElementById('lightbox-caption').innerText = caption;
-            document.getElementById('lightbox').style.display = 'flex';
-        }
-        function closeLightbox() {
-            document.getElementById('lightbox').style.display = 'none';
-        }
+        // --- Lightbox Logic ---
+        function openLightbox(src, caption) {
+            document.getElementById('lightbox-img').src = src;
+            document.getElementById('lightbox-caption').innerText = caption;
+            document.getElementById('lightbox').style.display = 'flex';
+        }
+        function closeLightbox() {
+            document.getElementById('lightbox').style.display = 'none';
+        }
 
-        // --- Typewriter Animation ---
-        let typewriterDone = false;
-        function startTypewriter() {
-            if(typewriterDone) return;
-            typewriterDone = true;
-            
-            const text = `To the absolute love of my life,\n\nEvery day spent with you feels like a beautiful adventure. You have this magical way of making everything brighter just by being yourself. Thank you for your warmth, your goofy smiles, and your endless love.\n\nOn your birthday, I want to remind you that you are my favorite person, today and for all the days to come. Happy Birthday! 😘❤️`;
-            let index = 0;
-            const target = document.getElementById('typewriter');
-            
-            function type() {
-                if (index < text.length) {
-                    target.innerHTML += text.charAt(index);
-                    index++;
-                    setTimeout(type, 45);
-                }
-            }
-            setTimeout(type, 800);
-        }
+        // --- Typewriter Animation ---
+        let typewriterDone = false;
+        function startTypewriter() {
+            if(typewriterDone) return;
+            typewriterDone = true;
+            
+            const text = `To the absolute love of my life,\n\nEvery day spent with you feels like a beautiful adventure. You have this magical way of making everything brighter just by being yourself. Thank you for your warmth, your goofy smiles, and your endless love.\n\nOn your birthday, I want to remind you that you are my favorite person, today and for all the days to come. Happy Birthday! 😘❤️`;
+            let index = 0;
+            const target = document.getElementById('typewriter');
+            
+            function type() {
+                if (index < text.length) {
+                    target.innerHTML += text.charAt(index);
+                    index++;
+                    setTimeout(type, 45);
+                }
+            }
+            setTimeout(type, 800);
+        }
 
-        // --- Mini Game Logic ---
-        const gameContainer = document.getElementById('game-container');
-        const basket = document.getElementById('basket');
-        const scoreDisplay = document.getElementById('score');
-        const timerDisplay = document.getElementById('timer');
-        const gameStartBtn = document.getElementById('game-start-btn');
-        const gameMessage = document.getElementById('game-message');
+        // --- Mini Game Logic ---
+        const gameContainer = document.getElementById('game-container');
+        const basket = document.getElementById('basket');
+        const scoreDisplay = document.getElementById('score');
+        const timerDisplay = document.getElementById('timer');
+        const gameStartBtn = document.getElementById('game-start-btn');
+        const gameMessage = document.getElementById('game-message');
 
-        let score = 0;
-        let timeLeft = 30;
-        let gameInterval;
-        let heartSpawnInterval;
-        let isPlaying = false;
-        let basketX = 50; 
+        let score = 0;
+        let timeLeft = 30;
+        let gameInterval;
+        let heartSpawnInterval;
+        let isPlaying = false;
+        let basketX = 50; 
 
-        window.addEventListener('keydown', (e) => {
-            if(!isPlaying) return;
-            if (e.key === 'ArrowLeft' && basketX > 5) basketX -= 8;
-            if (e.key === 'ArrowRight' && basketX < 95) basketX += 8;
-            basket.style.left = basketX + '%';
-        });
+        window.addEventListener('keydown', (e) => {
+            if(!isPlaying) return;
+            if (e.key === 'ArrowLeft' && basketX > 5) basketX -= 8;
+            if (e.key === 'ArrowRight' && basketX < 95) basketX += 8;
+            basket.style.left = basketX + '%';
+        });
 
-        // Touch Control handling for container
-        gameContainer.addEventListener('touchmove', (e) => {
-            if(!isPlaying) return;
-            const rect = gameContainer.getBoundingClientRect();
-            const touchX = e.touches[0].clientX - rect.left;
-            let percentage = (touchX / rect.width) * 100;
-            if (percentage < 5) percentage = 5;
-            if (percentage > 95) percentage = 95;
-            basketX = percentage;
-            basket.style.left = basketX + '%';
-        }, { passive: true });
+        // Touch Control handling for container
+        gameContainer.addEventListener('touchmove', (e) => {
+            if(!isPlaying) return;
+            const rect = gameContainer.getBoundingClientRect();
+            const touchX = e.touches[0].clientX - rect.left;
+            let percentage = (touchX / rect.width) * 100;
+            if (percentage < 5) percentage = 5;
+            if (percentage > 95) percentage = 95;
+            basketX = percentage;
+            basket.style.left = basketX + '%';
+        }, { passive: true });
 
-        gameStartBtn.addEventListener('click', startGame);
+        gameStartBtn.addEventListener('click', startGame);
 
-        function startGame() {
-            if (isPlaying) return;
-            isPlaying = true;
-            score = 0;
-            timeLeft = 30;
-            scoreDisplay.innerText = score;
-            timerDisplay.innerText = timeLeft;
-            gameMessage.innerText = "";
-            gameStartBtn.style.display = 'none';
+        function startGame() {
+            if (isPlaying) return;
+            isPlaying = true;
+            score = 0;
+            timeLeft = 30;
+            scoreDisplay.innerText = score;
+            timerDisplay.innerText = timeLeft;
+            gameMessage.innerText = "";
+            gameStartBtn.style.display = 'none';
 
-            gameInterval = setInterval(() => {
-                timeLeft--;
-                timerDisplay.innerText = timeLeft;
-                if (timeLeft <= 0) endGame();
-            }, 1000);
+            gameInterval = setInterval(() => {
+                timeLeft--;
+                timerDisplay.innerText = timeLeft;
+                if (timeLeft <= 0) endGame();
+            }, 1000);
 
-            heartSpawnInterval = setInterval(spawnFallingHeart, 600);
-        }
+            heartSpawnInterval = setInterval(spawnFallingHeart, 600);
+        }
 
-        function spawnFallingHeart() {
-            const fHeart = document.createElement('div');
-            fHeart.classList.add('falling-heart');
-            fHeart.innerHTML = ['💖','❤️','💝','🍬'][Math.floor(Math.random()*4)];
-            
-            const containerWidth = gameContainer.clientWidth;
-            const randomLeft = Math.random() * (containerWidth - 30);
-            fHeart.style.left = randomLeft + 'px';
-            fHeart.style.top = '0px';
-            gameContainer.appendChild(fHeart);
+        function spawnFallingHeart() {
+            const fHeart = document.createElement('div');
+            fHeart.classList.add('falling-heart');
+            fHeart.innerHTML = ['💖','❤️','💝','🍬'][Math.floor(Math.random()*4)];
+            
+            const containerWidth = gameContainer.clientWidth;
+            const randomLeft = Math.random() * (containerWidth - 30);
+            fHeart.style.left = randomLeft + 'px';
+            fHeart.style.top = '0px';
+            gameContainer.appendChild(fHeart);
 
-            let topPos = 0;
-            const fallSpeed = Math.random() * 3 + 3;
-            
-            const fallInterval = setInterval(() => {
-                if (!isPlaying) {
-                    clearInterval(fallInterval);
-                    fHeart.remove();
-                    return;
-                }
-                topPos += fallSpeed;
-                fHeart.style.top = topPos + 'px';
+            let topPos = 0;
+            const fallSpeed = Math.random() * 3 + 3;
+            
+            const fallInterval = setInterval(() => {
+                if (!isPlaying) {
+                    clearInterval(fallInterval);
+                    fHeart.remove();
+                    return;
+                }
+                topPos += fallSpeed;
+                fHeart.style.top = topPos + 'px';
 
-                const basketRect = basket.getBoundingClientRect();
-                const heartRect = fHeart.getBoundingClientRect();
+                const basketRect = basket.getBoundingClientRect();
+                const heartRect = fHeart.getBoundingClientRect();
 
-                if (
-                    heartRect.bottom >= basketRect.top &&
-                    heartRect.right >= basketRect.left &&
-                    heartRect.left <= basketRect.right &&
-                    heartRect.top <= basketRect.bottom
-                ) {
-                    score++;
-                    scoreDisplay.innerText = score;
-                    clearInterval(fallInterval);
-                    fHeart.remove();
-                }
+                if (
+                    heartRect.bottom >= basketRect.top &&
+                    heartRect.right >= basketRect.left &&
+                    heartRect.left <= basketRect.right &&
+                    heartRect.top <= basketRect.bottom
+                ) {
+                    score++;
+                    scoreDisplay.innerText = score;
+                    clearInterval(fallInterval);
+                    fHeart.remove();
+                }
 
-                if (topPos > 350) {
-                    clearInterval(fallInterval);
-                    fHeart.remove();
-                }
-            }, 20);
-        }
+                if (topPos > 350) {
+                    clearInterval(fallInterval);
+                    fHeart.remove();
+                }
+            }, 20);
+        }
 
-        function endGame() {
-            isPlaying = false;
-            clearInterval(gameInterval);
-            clearInterval(heartSpawnInterval);
-            gameStartBtn.style.display = 'inline-block';
-            gameStartBtn.innerText = "Play Again 🔄";
+        function endGame() {
+            isPlaying = false;
+            clearInterval(gameInterval);
+            clearInterval(heartSpawnInterval);
+            gameStartBtn.style.display = 'inline-block';
+            gameStartBtn.innerText = "Play Again 🔄";
 
-            let message = "";
-            if (score >= 25) message = `Wow! You caught ${score} hearts! You're a certified lover-pro! 🏆💖`;
-            else if (score >= 12) message = `Great job! You caught ${score} hearts! My heart beats just for you! 🥰`;
-            else message = `You caught ${score} hearts! Don't worry, you've already caught my heart forever! 🔒💝`;
-            
-            gameMessage.innerText = message;
-        }
+            let message = "";
+            if (score >= 25) message = `Wow! You caught ${score} hearts! You're a certified lover-pro! 🏆💖`;
+            else if (score >= 12) message = `Great job! You caught ${score} hearts! My heart beats just for you! 🥰`;
+            else message = `You caught ${score} hearts! Don't worry, you've already caught my heart forever! 🔒💝`;
+            
+            gameMessage.innerText = message;
+        }
 
-        // --- Final Surprise Popups ---
-        const surprisePopupBtn = document.getElementById('surprise-popup-btn');
-        const surpriseModal = document.getElementById('surprise-modal');
+        // --- Final Surprise Popups ---
+        const surprisePopupBtn = document.getElementById('surprise-popup-btn');
+        const surpriseModal = document.getElementById('surprise-modal');
 
-        surprisePopupBtn.addEventListener('click', () => {
-            surpriseModal.style.display = 'flex';
-            startConfetti();
-        });
+        surprisePopupBtn.addEventListener('click', () => {
+            surpriseModal.style.display = 'flex';
+            startConfetti();
+        });
 
-        function closeModal() {
-            surpriseModal.style.display = 'none';
-        }
+        function closeModal() {
+            surpriseModal.style.display = 'none';
+        }
 
-        window.onclick = function(event) {
-            if (event.target === surpriseModal) closeModal();
-        }
+        window.onclick = function(event) {
+            if (event.target === surpriseModal) closeModal();
+        }
 
-        // --- Confetti Engine ---
-        const canvas = document.getElementById("confetti-canvas");
-        const ctx = canvas.getContext("2d");
-        let confettiPieces = [];
+        // --- Confetti Engine ---
+        const canvas = document.getElementById("confetti-canvas");
+        const ctx = canvas.getContext("2d");
+        let confettiPieces = [];
 
-        function resizeCanvas() {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-        }
-        window.addEventListener('resize', resizeCanvas);
-        resizeCanvas();
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+        window.addEventListener('resize', resizeCanvas);
+        resizeCanvas();
 
-        function startConfetti() {
-            confettiPieces = [];
-            for (let i = 0; i < 150; i++) {
-                confettiPieces.push({
-                    x: Math.random() * canvas.width,
-                    y: Math.random() * canvas.height - canvas.height,
-                    r: Math.random() * 6 + 4,
-                    d: Math.random() * canvas.height,
-                    color: `rgba(${Math.floor(Math.random()*255)}, ${Math.floor(Math.random()*150+100)}, ${Math.floor(Math.random()*200+50)}, 0.8)`,
-                    tilt: Math.random() * 10 - 5,
-                    tiltAngleIncremental: Math.random() * 0.07 + 0.02,
-                    tiltAngle: 0
-                });
-            }
-            requestAnimationFrame(updateConfetti);
-        }
+        function startConfetti() {
+            confettiPieces = [];
+            for (let i = 0; i < 150; i++) {
+                confettiPieces.push({
+                    x: Math.random() * canvas.width,
+                    y: Math.random() * canvas.height - canvas.height,
+                    r: Math.random() * 6 + 4,
+                    d: Math.random() * canvas.height,
+                    color: `rgba(${Math.floor(Math.random()*255)}, ${Math.floor(Math.random()*150+100)}, ${Math.floor(Math.random()*200+50)}, 0.8)`,
+                    tilt: Math.random() * 10 - 5,
+                    tiltAngleIncremental: Math.random() * 0.07 + 0.02,
+                    tiltAngle: 0
+                });
+            }
+            requestAnimationFrame(updateConfetti);
+        }
 
-        function updateConfetti() {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            let activePieces = 0;
+        function updateConfetti() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            let activePieces = 0;
 
-            confettiPieces.forEach((p) => {
-                p.tiltAngle += p.tiltAngleIncremental;
-                p.y += (Math.cos(p.d) + 3 + p.r / 2) / 2;
-                p.x += Math.sin(p.tiltAngle);
-                p.tilt = Math.sin(p.tiltAngle - p.r / 2) * 15;
+            confettiPieces.forEach((p) => {
+                p.tiltAngle += p.tiltAngleIncremental;
+                p.y += (Math.cos(p.d) + 3 + p.r / 2) / 2;
+                p.x += Math.sin(p.tiltAngle);
+                p.tilt = Math.sin(p.tiltAngle - p.r / 2) * 15;
 
-                if (p.y <= canvas.height) activePieces++;
+                if (p.y <= canvas.height) activePieces++;
 
-                ctx.beginPath();
-                ctx.lineWidth = p.r;
-                ctx.strokeStyle = p.color;
-                ctx.moveTo(p.x + p.tilt + p.r / 2, p.y);
-                ctx.lineTo(p.x + p.tilt, p.y + p.tilt + p.r / 2);
-                ctx.stroke();
-            });
+                ctx.beginPath();
+                ctx.lineWidth = p.r;
+                ctx.strokeStyle = p.color;
+                ctx.moveTo(p.x + p.tilt + p.r / 2, p.y);
+                ctx.lineTo(p.x + p.tilt, p.y + p.tilt + p.r / 2);
+                ctx.stroke();
+            });
 
-            if (activePieces > 0) {
-                requestAnimationFrame(updateConfetti);
-            } else {
-                ctx.clearRect(0, 0, canvas.width, canvas.height);
-            }
-        }
-        function openVideoLightbox(videoSrc) {
-    const lightbox = document.getElementById("videoLightbox");
-    const video = document.getElementById("lightboxVideo");
+            if (activePieces > 0) {
+                requestAnimationFrame(updateConfetti);
+            } else {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+            }
+        }
+        function openVideoLightbox(videoSrc) {
+    const lightbox = document.getElementById("videoLightbox");
+    const video = document.getElementById("lightboxVideo");
 
-    video.src = videoSrc;
-    lightbox.style.display = "flex";
-    video.play();
+    video.src = videoSrc;
+    lightbox.style.display = "flex";
+    video.play();
 }
 
 function closeVideoLightbox() {
-    const lightbox = document.getElementById("videoLightbox");
-    const video = document.getElementById("lightboxVideo");
+    const lightbox = document.getElementById("videoLightbox");
+    const video = document.getElementById("lightboxVideo");
 
-    video.pause();
-    video.src = "";
-    lightbox.style.display = "none";
+    video.pause();
+    video.src = "";
+    lightbox.style.display = "none";
 }
-    </script>
+    </script>
 
-    <!-- VIDEO LIGHTBOX -->
+    <!-- VIDEO LIGHTBOX -->
 <div id="videoLightbox" class="lightbox" onclick="closeVideoLightbox()">
-    <div class="lightbox-content" onclick="event.stopPropagation()">
-        <video id="lightboxVideo" controls autoplay></video>
-    </div>
+    <div class="lightbox-content" onclick="event.stopPropagation()">
+        <video id="lightboxVideo" controls autoplay></video>
+    </div>
 </div>
 </body>
 </html>
+ 
