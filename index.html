@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Happy Birthday My Love ❤️</title>
@@ -413,30 +412,12 @@ box-shadow: 0 15px 30px rgba(255, 77, 109, 0.3);
         }
 
         /* --- Responsiveness --- */
-        /* @media (max-width: 600px) {
+        @media (max-width: 600px) {
             .pulse-glow { font-size: 2.2rem; }
             .heartbeat-text { font-size: 2.8rem; }
             .glass-card { padding: 25px 15px; }
             section { padding: 20px 10px; }
-        } */
-       @media screen and (max-width: 768px) {
-    .gallery-grid {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Mobile එකේදීත් grid එකක් විදිහට තියාගන්න */
-        gap: 15px;
-        padding: 10px;
-    }
-
-    .gallery-card img {
-        height: 220px; /* Mobile screen වලට ගැලපෙන උස */
-    }
-
-    .gallery-card img {
-    width: 100%;
-    height: 250px; /* Card එකේ image එක පෙනෙන්න ඕන උස ස්ථාවරව ලබාදීම */
-    display: block;
-    object-fit: cover; /* Image එක stretch නොවී card එකට ලස්සනට fill වෙන්න */
-}
-}
+        }
         .lightbox {
     display: none;
     position: fixed;
@@ -503,8 +484,8 @@ box-shadow: 0 15px 30px rgba(255, 77, 109, 0.3);
                 <div class="gallery-card"
      onclick="openLightbox('f02.jpg', '🌹 A Love Story Written by Fate')">
     <img src="f01.jpeg"
-         alt="Memory 6">
-         <!-- style="width:100%; height:auto; max-height:500px; object-fit:contain; display:block;"> -->
+         alt="Memory 6"
+         style="width:100%; height:auto; max-height:500px; object-fit:contain; display:block;">
     <div class="caption">Forever My Favorite Person 💖</div>
 </div>
                 <div class="gallery-card"
