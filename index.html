@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Birthday My Love ❤️</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Happy Birthday My Love ❤️ | A Celebration For You</title>
     <style>
         /* --- Global Styles & Reset --- */
         * {
@@ -57,7 +57,7 @@
         .floating-heart {
             position: absolute;
             bottom: -50px;
-            color: rgba(255, 105, 180, 0.6);
+            color: rgba(255, 105, 180, 0.7);
             font-size: 24px;
             animation: floatUp 6s linear infinite;
         }
@@ -93,7 +93,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            padding: 40px 20px;
+            padding: 60px 20px;
             position: relative;
             z-index: 2;
         }
@@ -104,15 +104,15 @@
 
         /* --- Glassmorphism Cards --- */
         .glass-card {
-            background: rgba(255, 255, 255, 0.25);
+            background: rgba(255, 255, 255, 0.28);
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.4);
-            border-radius: 24px;
-            padding: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            border-radius: 28px;
+            padding: 40px 24px;
             box-shadow: 0 8px 32px 0 rgba(255, 154, 162, 0.3);
             text-align: center;
-            max-width: 600px;
+            max-width: 700px;
             width: 100%;
             transition: transform 0.3s ease;
         }
@@ -129,7 +129,7 @@
         }
 
         .pulse-glow {
-            font-size: 3rem;
+            font-size: 2.8rem;
             animation: pulseGlow 2.5s ease-in-out infinite;
             text-shadow: 0 0 10px rgba(255, 77, 109, 0.4);
         }
@@ -147,7 +147,7 @@
         }
 
         .heartbeat-text {
-            font-size: 4rem;
+            font-size: 3.5rem;
             color: #ff0054;
             animation: heartbeat 1.2s infinite;
         }
@@ -190,123 +190,189 @@
             top: 20px;
             right: 20px;
             z-index: 100;
-            background: rgba(255, 255, 255, 0.7);
-            border: 1px solid rgba(255,255,255,0.5);
-            padding: 10px 15px;
-            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.75);
+            border: 1px solid rgba(255,255,255,0.6);
+            backdrop-filter: blur(6px);
+            padding: 10px 18px;
+            border-radius: 40px;
             font-weight: bold;
             cursor: pointer;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            font-size: 0.9rem;
         }
 
-        /* --- Memory Gallery---*/
+        /* --- FIXED: MEMORY GALLERY - FULLY RESPONSIVE MOBILE FIX --- */
         .gallery-grid {
-         display: grid;
-         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-         gap: 25px;
-         width: 100%;
-         max-width: 1000px;
-         margin-top: 30px;
-         align-items: start;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            width: 100%;
+            max-width: 1200px;
+            margin: 30px auto 0;
+            justify-content: center;
+            align-items: stretch;
         }
 
         .gallery-card {
-         background: white;
-         border-radius: 20px;
-         overflow: hidden;
-         box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-         cursor: pointer;
-         transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-         display: flex;
-         flex-direction: column;
-         height: 100%;
-
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(2px);
+            border-radius: 28px;
+            overflow: hidden;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: all 0.35s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: auto;
         }
 
         .gallery-card img {
-         width: 100%;
-         height: 320px;
-         object-fit: cover;
-         display: block;
-        } 
-
+            width: 100%;
+            aspect-ratio: 4 / 3;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.4s ease;
+        }
 
         .gallery-card .caption {
-         padding: 15px;
-         text-align: center;
-         color: #ff4d6d;
-         font-weight: 600;
-         margin-top: auto;
+            padding: 18px 12px;
+            text-align: center;
+            color: #c9184a;
+            font-weight: 700;
+            font-size: 1rem;
+            background: rgba(255, 248, 245, 0.7);
+            margin-top: auto;
+            letter-spacing: 0.3px;
         }
 
         .gallery-card:hover {
-         transform: translateY(-8px) scale(1.03);
-         box-shadow: 0 15px 30px rgba(255, 77, 109, 0.3);
+            transform: translateY(-6px) scale(1.02);
+            box-shadow: 0 20px 35px rgba(255, 77, 109, 0.35);
         }
 
-        @keyframes lightShake {
-         0% { transform: rotate(1deg); }
-         100% { transform: rotate(-1deg); }
+        /* --- Specific mobile overrides (max-width: 640px) --- */
+        @media (max-width: 640px) {
+            .gallery-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+                padding: 0 8px;
+            }
+            
+            .gallery-card {
+                border-radius: 24px;
+                max-width: 100%;
+                margin: 0 auto;
+            }
+            
+            .gallery-card img {
+                aspect-ratio: 4 / 3;
+                width: 100%;
+                height: auto;
+                object-fit: cover;
+            }
+            
+            .gallery-card .caption {
+                font-size: 0.95rem;
+                padding: 14px 10px;
+            }
+            
+            .glass-card {
+                padding: 32px 18px;
+            }
+            
+            h1.pulse-glow {
+                font-size: 2.3rem;
+            }
+            
+            .heartbeat-text {
+                font-size: 2.5rem;
+            }
+            
+            .music-btn {
+                top: 12px;
+                right: 12px;
+                padding: 6px 14px;
+                font-size: 0.8rem;
+            }
         }
 
-
-        /* --- Lightbox --- */
+        /* --- Lightbox (image/video) --- */
         .lightbox {
             display: none;
             position: fixed;
-            z-index: 200;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(0,0,0,0.85);
+            z-index: 9999;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.92);
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            padding: 20px;
+            backdrop-filter: blur(5px);
         }
 
-        .lightbox img {
+        .lightbox img, .lightbox-content video {
             max-width: 90%;
-            max-height: 70vh;
-            border-radius: 10px;
-            box-shadow: 0 0 25px rgba(255,255,255,0.2);
+            max-height: 75vh;
+            border-radius: 20px;
+            box-shadow: 0 0 30px rgba(255,255,200,0.3);
+            object-fit: contain;
+        }
+
+        .lightbox-content {
+            position: relative;
+            text-align: center;
         }
 
         .lightbox p {
-            color: #fff;
-            margin-top: 15px;
+            color: white;
+            margin-top: 20px;
             font-size: 1.2rem;
-            text-align: center;
-            max-width: 600px;
+            background: rgba(0,0,0,0.5);
+            padding: 8px 20px;
+            border-radius: 50px;
         }
 
         .close-lightbox {
             position: absolute;
-            top: 30px; right: 40px;
-            color: white; font-size: 40px; cursor: pointer;
+            top: 25px;
+            right: 35px;
+            color: white;
+            font-size: 44px;
+            cursor: pointer;
+            font-weight: bold;
+            background: rgba(0,0,0,0.4);
+            width: 50px;
+            text-align: center;
+            border-radius: 30px;
+            transition: 0.2s;
         }
 
-        /* --- Love Message Section --- */
-        .letter-card {
-            min-height: 250px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
+        /* --- Love Letter & Typewriter --- */
         .typewriter-text {
             font-size: 1.2rem;
-            line-height: 1.6;
-            font-style: italic;
+            line-height: 1.7;
+            font-style: normal;
+            font-weight: 500;
+            color: #2d2a5e;
             white-space: pre-line;
+            text-align: left;
+            background: rgba(255,245,240,0.4);
+            padding: 20px;
+            border-radius: 30px;
         }
 
-        /* --- Mini Game Section --- */
+        /* --- Mini Game --- */
         .game-card {
-            max-width: 500px;
+            max-width: 550px;
         }
         .game-instructions {
             font-size: 0.9rem;
             margin-bottom: 15px;
-            color: #666;
+            color: #2c1a4b;
+            font-weight: 500;
         }
         .game-stats {
             display: flex;
@@ -319,71 +385,69 @@
 
         #game-container {
             width: 100%;
-            height: 350px;
-            background: rgba(255, 255, 255, 0.4);
-            border-radius: 15px;
+            height: 380px;
+            background: rgba(255, 220, 220, 0.35);
+            border-radius: 28px;
             position: relative;
             overflow: hidden;
-            border: 2px dashed rgba(255, 77, 109, 0.4);
+            border: 2px solid rgba(255, 110, 130, 0.6);
             margin-bottom: 15px;
+            touch-action: pan-x;
         }
 
         #basket {
             position: absolute;
-            bottom: 10px;
+            bottom: 12px;
             left: 50%;
             transform: translateX(-50%);
-            font-size: 40px;
-            width: 60px;
-            height: 50px;
+            font-size: 46px;
+            width: 70px;
             text-align: center;
             cursor: pointer;
-            touch-action: none;
+            user-select: none;
+            filter: drop-shadow(0 4px 6px rgba(0,0,0,0.2));
         }
 
         .falling-heart {
             position: absolute;
-            font-size: 28px;
+            font-size: 34px;
             user-select: none;
+            pointer-events: none;
         }
 
         .game-message {
             margin-top: 15px;
             font-weight: bold;
             font-size: 1.2rem;
-            color: #ff0054;
+            color: #b9024b;
         }
 
         /* --- Modals --- */
         .modal {
             display: none;
             position: fixed;
-            z-index: 300;
+            z-index: 4000;
             top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(0,0,0,0.4);
+            background: rgba(0,0,0,0.5);
             justify-content: center;
             align-items: center;
             padding: 20px;
         }
 
         .modal-content {
-            background: rgba(255, 255, 255, 0.85);
+            background: rgba(255, 240, 245, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 40px;
+            max-width: 500px;
+            width: 90%;
             position: relative;
-            animation: modalPop 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        }
-
-        @keyframes modalPop {
-            from { transform: scale(0.7); opacity: 0; }
-            to { transform: scale(1); opacity: 1; }
         }
 
         .close-modal {
             position: absolute;
-            top: 15px; right: 20px;
-            font-size: 30px; cursor: pointer; color: #aaa;
+            top: 12px; right: 20px;
+            font-size: 32px; cursor: pointer; color: #aa2e4e;
         }
-        .close-modal:hover { color: #333; }
-
         .signature {
             margin-top: 20px;
             font-weight: bold;
@@ -403,7 +467,6 @@
             transform: translateY(0);
         }
 
-        /* --- Confetti Canvas --- */
         #confetti-canvas {
             position: fixed;
             top: 0; left: 0;
@@ -412,38 +475,10 @@
             z-index: 99;
         }
 
-        /* --- Responsiveness --- */
-@media (max-width: 768px) {
-
-    .gallery-grid{
-        grid-template-columns: 1fr;
-        gap: 15px;
-    }
-
-    .gallery-card img{
-        width:100%;
-        height:250px;
-        object-fit:cover;
-    }
-}
-        .lightbox {
-    display: none;
-    position: fixed;
-    z-index: 9999;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.9);
-    justify-content: center;
-    align-items: center;
-}
-
-.lightbox-content video {
-    width: 90%;
-    max-height: 90vh;
-    border-radius: 10px;
-}
+        /* Additional tiny touches */
+        .btn-primary:active {
+            transform: scale(0.97);
+        }
     </style>
 </head>
 <body>
@@ -452,7 +487,7 @@
     <div id="heart-container"></div>
 
     <button id="music-toggle" class="music-btn">🎵 ON</button>
-    <audio id="bg-music" loop>
+    <audio id="bg-music" loop preload="auto">
         <source src="liqwyd-birthday(chosic.com).mp3" type="audio/mpeg">
     </audio>
 
@@ -465,66 +500,46 @@
     </section>
 
     <div id="main-content" class="hidden">
-
+        <!-- GALLERY SECTION - FULLY FIXED RESPONSIVE -->
         <section id="gallery" class="fade-in">
             <h2>🌸 Our Beautiful Memories</h2>
-        
             <div class="gallery-grid">
-                <div class="gallery-card" onclick="openLightbox('f1.jpg', 'The day we laughed until our stomachs hurt! 🥰')">
-                    <img src="first.jpg" alt="Memory 1">
+                <div class="gallery-card" onclick="openLightbox('first.jpg', 'The day we laughed until our stomachs hurt! 🥰')">
+                    <img src="first.jpg" alt="Memory 1" loading="lazy">
                     <div class="caption">Our First Date ✨</div>
                 </div>
-                <div class="gallery-card" onclick="openLightbox('s2.jpg', 'Every moment with you is like a sweet dream. 🌙')">
-                    <img src="s1.jpg" alt="Memory 2">
-                    <div class="caption">Tiny Moments, Endless Happiness 🌸 </div>
+                <div class="gallery-card" onclick="openLightbox('s1.jpg', 'Every moment with you is like a sweet dream. 🌙')">
+                    <img src="s1.jpg" alt="Memory 2" loading="lazy">
+                    <div class="caption">Tiny Moments, Endless Happiness 🌸</div>
                 </div>
-                <div class="gallery-card" onclick="openLightbox('t1.jpg', '💖 Forever Isn t Long Enough With You')">
-                    <img src="t2.jpg" alt="Memory 3">
+                <div class="gallery-card" onclick="openLightbox('t2.jpg', '💖 Forever Isn’t Long Enough With You')">
+                    <img src="t2.jpg" alt="Memory 3" loading="lazy">
                     <div class="caption">Moments That Feel Like Magic 🦋</div>
                 </div>
-                <!-- Video Card 1 -->
-<div class="gallery-card"
-     onclick="openVideoLightbox('v1.mp4')">
-    <img src="vimg1.jpg" alt="Video 1" 
-         style=" width:100%; height:auto; max-height:500px; object-fit:contain; display:block;">
-        <div class="caption">🥺 Falling for You Again and Again</div>
-            </div>
-                <div class="gallery-card"
-     onclick="openLightbox('f02.jpg', '🌹 A Love Story Written by Fate')">
-    <img src="f01.jpg"
-         alt="Memory 6"
-         style="width:100%; height:auto; max-height:500px; object-fit:contain; display:block;">
-    <div class="caption">Forever My Favorite Person 💖</div>
-</div>
-                <div class="gallery-card"
-     onclick="openLightbox('5-2.jpg', '🌹 A Love Story Written by Fate')">
-    <img src="5-1.jpg"
-         alt="Memory 6"
-         style="width:100%; height:auto; max-height:500px; object-fit:contain; display:block;">
-    <div class="caption">Forever My Favorite Person 💖</div>
-</div>
-                <div class="gallery-card"
-     onclick="openLightbox('6-2.jpg', '🌹 A Love Story Written by Fate')">
-    <img src="6-1.jpg"
-         alt="Memory 6"
-         style="width:100%; height:auto; max-height:500px; object-fit:contain; display:block;">
-    <div class="caption">Forever My Favorite Person 💖</div>
-</div>
-
-<div class="gallery-card"
-     onclick="openLightbox('7-2.jpg', '💍 You, Me & A Lifetime of Memories')">
-    <img src="7-1.jpg"
-         alt="Memory 7"
-         style="width:100%; height:auto; max-height:500px; object-fit:contain; display:block;">
-    <div class="caption">Every Picture Holds a Thousand Feelings 📸</div>
-</div>
-<!-- Video Card 2 -->
-<div class="gallery-card"
-     onclick="openVideoLightbox('v2.mp4')">
-    <img src="vimg2.jpg" alt="Video 2"
-         style="width:100%; height:auto; max-height:500px; object-fit:contain; display:block;">
-    <div class="caption">Special Memories 💖</div>
-</div>
+                <div class="gallery-card" onclick="openVideoLightbox('v1.mp4')">
+                    <img src="vimg1.jpg" alt="Video 1" loading="lazy" style="object-fit: cover;">
+                    <div class="caption">🥺 Falling for You Again and Again</div>
+                </div>
+                <div class="gallery-card" onclick="openLightbox('f01.jpg', '🌹 A Love Story Written by Fate')">
+                    <img src="f01.jpg" alt="Memory 5" loading="lazy">
+                    <div class="caption">Forever My Favorite Person 💖</div>
+                </div>
+                <div class="gallery-card" onclick="openLightbox('5-1.jpg', '🌹 A Love Story Written by Fate')">
+                    <img src="5-1.jpg" alt="Memory 6" loading="lazy">
+                    <div class="caption">Holding you close in every heartbeat 💕</div>
+                </div>
+                <div class="gallery-card" onclick="openLightbox('6-1.jpg', '🌹 A Love Story Written by Fate')">
+                    <img src="6-1.jpg" alt="Memory 7" loading="lazy">
+                    <div class="caption">Forever My Favorite Person 💖</div>
+                </div>
+                <div class="gallery-card" onclick="openLightbox('7-1.jpg', '💍 You, Me & A Lifetime of Memories')">
+                    <img src="7-1.jpg" alt="Memory 8" loading="lazy">
+                    <div class="caption">Every Picture Holds a Thousand Feelings 📸</div>
+                </div>
+                <div class="gallery-card" onclick="openVideoLightbox('v2.mp4')">
+                    <img src="vimg2.jpg" alt="Video 2" loading="lazy">
+                    <div class="caption">Special Memories 💖</div>
+                </div>
             </div>
         </section>
 
@@ -538,17 +553,14 @@
         <section id="mini-game" class="fade-in">
             <div class="glass-card game-card">
                 <h2>🎮 Catch the Hearts Game 💕</h2>
-                <p class="game-instructions">Use Left/Right Arrows or Touch/Drag at the bottom to move the basket!</p>
-                
+                <p class="game-instructions">Use Left/Right Arrows or Slide finger on game area 🎯</p>
                 <div class="game-stats">
                     <div>Score: <span id="score">0</span></div>
                     <div>Time Left: <span id="timer">30</span>s</div>
                 </div>
-
                 <div id="game-container">
                     <div id="basket">🧺</div>
                 </div>
-
                 <button id="game-start-btn" class="btn-primary">Start Game 🚀</button>
                 <div id="game-message" class="game-message"></div>
             </div>
@@ -558,13 +570,21 @@
             <h1 class="heartbeat-text">I LOVE YOU ❤️</h1>
             <button id="surprise-popup-btn" class="btn-primary bounce-hover">Click for Surprise 💌</button>
         </section>
-
     </div>
 
+    <!-- Image Lightbox -->
     <div id="lightbox" class="lightbox" onclick="closeLightbox()">
         <span class="close-lightbox">&times;</span>
-        <img id="lightbox-img" src="" alt="Enlarged view">
+        <img id="lightbox-img" src="" alt="Enlarged memory">
         <p id="lightbox-caption"></p>
+    </div>
+
+    <!-- Video Lightbox -->
+    <div id="videoLightbox" class="lightbox" onclick="closeVideoLightbox()">
+        <div class="lightbox-content" onclick="event.stopPropagation()">
+            <video id="lightboxVideo" controls loop></video>
+        </div>
+        <span class="close-lightbox" onclick="closeVideoLightbox()" style="top: 20px;">&times;</span>
     </div>
 
     <div id="surprise-modal" class="modal">
@@ -579,326 +599,312 @@
     <canvas id="confetti-canvas"></canvas>
 
     <script>
-        // --- Global Elements & State ---
+        // --- DOM Elements ---
         const bgMusic = document.getElementById('bg-music');
         const musicToggle = document.getElementById('music-toggle');
         const startBtn = document.getElementById('start-btn');
         const mainContent = document.getElementById('main-content');
         const heartContainer = document.getElementById('heart-container');
         const bgParticles = document.getElementById('bg-particles');
-
         let musicPlaying = false;
 
-        // --- Background Decorations & Generators ---
+        // --- Floating Hearts & Sparkles (background fun)---
         function createFloatingHeart() {
             const heart = document.createElement('div');
             heart.classList.add('floating-heart');
-            heart.innerHTML = ['❤️', '💖', '💕', '💗', '💝'][Math.floor(Math.random() * 5)];
+            heart.innerHTML = ['❤️', '💖', '💕', '💗', '💝', '💘'][Math.floor(Math.random() * 6)];
             heart.style.left = Math.random() * 100 + 'vw';
-            heart.style.fontSize = Math.random() * 20 + 15 + 'px';
-            heart.style.animationDuration = Math.random() * 3 + 4 + 's'; 
+            heart.style.fontSize = Math.random() * 20 + 18 + 'px';
+            heart.style.animationDuration = Math.random() * 4 + 4 + 's';
             heartContainer.appendChild(heart);
-            
             setTimeout(() => { heart.remove(); }, 7000);
         }
-        setInterval(createFloatingHeart, 400);
+        setInterval(createFloatingHeart, 480);
 
         function createSparkles() {
-            for (let i = 0; i < 40; i++) {
+            for (let i = 0; i < 45; i++) {
                 const sparkle = document.createElement('div');
                 sparkle.classList.add('sparkle');
-                sparkle.style.width = sparkle.style.height = Math.random() * 5 + 2 + 'px';
+                sparkle.style.width = sparkle.style.height = Math.random() * 6 + 2 + 'px';
                 sparkle.style.top = Math.random() * 100 + 'vh';
                 sparkle.style.left = Math.random() * 100 + 'vw';
-                sparkle.style.animationDelay = Math.random() * 2 + 's';
+                sparkle.style.animationDelay = Math.random() * 2.5 + 's';
                 bgParticles.appendChild(sparkle);
             }
         }
         createSparkles();
 
-        // --- Audio Controller ---
+        // --- Music Toggle & Auto-play on start interaction ---
         musicToggle.addEventListener('click', () => {
             if (musicPlaying) {
                 bgMusic.pause();
                 musicToggle.innerText = "🎵 OFF";
             } else {
-                bgMusic.play().catch(err => console.log("Audio block context: ", err));
+                bgMusic.play().catch(e => console.log("Audio play prevented", e));
                 musicToggle.innerText = "🎵 ON";
             }
             musicPlaying = !musicPlaying;
         });
 
-        // --- Experience Init / Confetti Trigger ---
+        // --- Start experience + confetti + typewriter + scroll ---
         startBtn.addEventListener('click', () => {
-            bgMusic.play().then(() => { musicPlaying = true; musicToggle.innerText = "🎵 ON"; })
-                   .catch(() => { console.log("Autoplay context handled via interaction."); });
-
+            bgMusic.play().then(() => {
+                musicPlaying = true;
+                musicToggle.innerText = "🎵 ON";
+            }).catch(() => { console.log("Autoplay blocked, but click handled."); });
             mainContent.classList.remove('hidden');
             document.getElementById('gallery').scrollIntoView({ behavior: 'smooth' });
-            
-            startConfetti();
+            startConfetti(180);
             startTypewriter();
             initScrollAnimation();
         });
 
-        // --- Scroll Reveal Logic ---
         function initScrollAnimation() {
-            const Faders = document.querySelectorAll('.fade-in');
-            const appearOptions = { threshold: 0.15, rootMargin: "0px 0px -50px 0px" };
-            
-            const appearOnScroll = new IntersectionObserver((entries, observer) => {
+            const faders = document.querySelectorAll('.fade-in');
+            const appearOptions = { threshold: 0.15, rootMargin: "0px 0px -40px 0px" };
+            const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
-                    if(entry.isIntersecting){
+                    if (entry.isIntersecting) {
                         entry.target.classList.add('appear');
                         observer.unobserve(entry.target);
                     }
                 });
             }, appearOptions);
-
-            Faders.forEach(fader => appearOnScroll.observe(fader));
+            faders.forEach(f => observer.observe(f));
         }
 
-        // --- Lightbox Logic ---
-        function openLightbox(src, caption) {
-            document.getElementById('lightbox-img').src = src;
-            document.getElementById('lightbox-caption').innerText = caption;
-            document.getElementById('lightbox').style.display = 'flex';
-        }
-        function closeLightbox() {
+        // --- Lightbox Functions (Image)---
+        window.openLightbox = function(src, caption) {
+            const lightbox = document.getElementById('lightbox');
+            const img = document.getElementById('lightbox-img');
+            const cap = document.getElementById('lightbox-caption');
+            img.src = src;
+            cap.innerText = caption;
+            lightbox.style.display = 'flex';
+        };
+        window.closeLightbox = function() {
             document.getElementById('lightbox').style.display = 'none';
-        }
+        };
 
-        // --- Typewriter Animation ---
-        let typewriterDone = false;
+        // --- Video Lightbox functions (global)---
+        window.openVideoLightbox = function(videoSrc) {
+            const videoBox = document.getElementById('videoLightbox');
+            const video = document.getElementById('lightboxVideo');
+            video.src = videoSrc;
+            videoBox.style.display = 'flex';
+            video.play().catch(e => console.log("video play", e));
+        };
+        window.closeVideoLightbox = function() {
+            const videoBox = document.getElementById('videoLightbox');
+            const video = document.getElementById('lightboxVideo');
+            video.pause();
+            video.src = "";
+            videoBox.style.display = 'none';
+        };
+
+        // --- Typewriter Effect ---
+        let typeStarted = false;
         function startTypewriter() {
-            if(typewriterDone) return;
-            typewriterDone = true;
-            
-            const text = `To the absolute love of my life,\n\nEvery day spent with you feels like a beautiful adventure. You have this magical way of making everything brighter just by being yourself. Thank you for your warmth, your goofy smiles, and your endless love.\n\nOn your birthday, I want to remind you that you are my favorite person, today and for all the days to come. Happy Birthday! 😘❤️`;
-            let index = 0;
+            if (typeStarted) return;
+            typeStarted = true;
+            const fullText = `To the absolute love of my life,\n\nEvery day spent with you feels like a beautiful adventure. You have this magical way of making everything brighter just by being yourself. Thank you for your warmth, your goofy smiles, and your endless love.\n\nOn your birthday, I want to remind you that you are my favorite person, today and for all the days to come. Happy Birthday! 😘❤️`;
+            let idx = 0;
             const target = document.getElementById('typewriter');
-            
+            target.innerHTML = '';
             function type() {
-                if (index < text.length) {
-                    target.innerHTML += text.charAt(index);
-                    index++;
-                    setTimeout(type, 45);
+                if (idx < fullText.length) {
+                    target.innerHTML += fullText.charAt(idx);
+                    idx++;
+                    setTimeout(type, 40);
                 }
             }
-            setTimeout(type, 800);
+            type();
         }
 
-        // --- Mini Game Logic ---
+        // ---------- MINI GAME (Fully functional) ----------
         const gameContainer = document.getElementById('game-container');
         const basket = document.getElementById('basket');
-        const scoreDisplay = document.getElementById('score');
-        const timerDisplay = document.getElementById('timer');
+        const scoreSpan = document.getElementById('score');
+        const timerSpan = document.getElementById('timer');
         const gameStartBtn = document.getElementById('game-start-btn');
-        const gameMessage = document.getElementById('game-message');
+        const gameMsgDiv = document.getElementById('game-message');
 
-        let score = 0;
-        let timeLeft = 30;
-        let gameInterval;
-        let heartSpawnInterval;
-        let isPlaying = false;
-        let basketX = 50; 
+        let score = 0, timeLeft = 30, isGameActive = false;
+        let gameTimerInterval, spawnInterval;
+        let basketX = 50;
+        basket.style.left = basketX + '%';
+
+        function handleMove(offsetPercent) {
+            if (!isGameActive) return;
+            let newX = basketX + offsetPercent;
+            if (newX < 5) newX = 5;
+            if (newX > 95) newX = 95;
+            basketX = newX;
+            basket.style.left = basketX + '%';
+        }
 
         window.addEventListener('keydown', (e) => {
-            if(!isPlaying) return;
-            if (e.key === 'ArrowLeft' && basketX > 5) basketX -= 8;
-            if (e.key === 'ArrowRight' && basketX < 95) basketX += 8;
+            if (!isGameActive) return;
+            if (e.key === 'ArrowLeft') handleMove(-8);
+            if (e.key === 'ArrowRight') handleMove(8);
+        });
+
+        gameContainer.addEventListener('touchmove', (e) => {
+            if (!isGameActive) return;
+            e.preventDefault();
+            const rect = gameContainer.getBoundingClientRect();
+            const touchX = e.touches[0].clientX - rect.left;
+            let perc = (touchX / rect.width) * 100;
+            perc = Math.min(95, Math.max(5, perc));
+            basketX = perc;
+            basket.style.left = basketX + '%';
+        }, { passive: false });
+
+        gameContainer.addEventListener('mousemove', (e) => {
+            if (!isGameActive) return;
+            if (e.buttons !== 1) return; // only when dragging
+            const rect = gameContainer.getBoundingClientRect();
+            let mouseX = e.clientX - rect.left;
+            let perc = (mouseX / rect.width) * 100;
+            perc = Math.min(95, Math.max(5, perc));
+            basketX = perc;
             basket.style.left = basketX + '%';
         });
 
-        // Touch Control handling for container
-        gameContainer.addEventListener('touchmove', (e) => {
-            if(!isPlaying) return;
-            const rect = gameContainer.getBoundingClientRect();
-            const touchX = e.touches[0].clientX - rect.left;
-            let percentage = (touchX / rect.width) * 100;
-            if (percentage < 5) percentage = 5;
-            if (percentage > 95) percentage = 95;
-            basketX = percentage;
-            basket.style.left = basketX + '%';
-        }, { passive: true });
-
-        gameStartBtn.addEventListener('click', startGame);
-
-        function startGame() {
-            if (isPlaying) return;
-            isPlaying = true;
-            score = 0;
-            timeLeft = 30;
-            scoreDisplay.innerText = score;
-            timerDisplay.innerText = timeLeft;
-            gameMessage.innerText = "";
-            gameStartBtn.style.display = 'none';
-
-            gameInterval = setInterval(() => {
-                timeLeft--;
-                timerDisplay.innerText = timeLeft;
-                if (timeLeft <= 0) endGame();
-            }, 1000);
-
-            heartSpawnInterval = setInterval(spawnFallingHeart, 600);
-        }
-
-        function spawnFallingHeart() {
-            const fHeart = document.createElement('div');
-            fHeart.classList.add('falling-heart');
-            fHeart.innerHTML = ['💖','❤️','💝','🍬'][Math.floor(Math.random()*4)];
-            
-            const containerWidth = gameContainer.clientWidth;
-            const randomLeft = Math.random() * (containerWidth - 30);
-            fHeart.style.left = randomLeft + 'px';
-            fHeart.style.top = '0px';
-            gameContainer.appendChild(fHeart);
-
+        function spawnHeart() {
+            if (!isGameActive) return;
+            const heartDiv = document.createElement('div');
+            heartDiv.classList.add('falling-heart');
+            heartDiv.innerHTML = ['💖','❤️','💝','💗','🍬'][Math.floor(Math.random()*5)];
+            const containerRect = gameContainer.getBoundingClientRect();
+            const maxLeft = Math.max(10, containerRect.width - 50);
+            const leftPos = Math.random() * maxLeft;
+            heartDiv.style.left = leftPos + 'px';
+            heartDiv.style.top = '0px';
+            gameContainer.appendChild(heartDiv);
             let topPos = 0;
-            const fallSpeed = Math.random() * 3 + 3;
-            
+            const speed = 3 + Math.random() * 3.5;
             const fallInterval = setInterval(() => {
-                if (!isPlaying) {
+                if (!isGameActive || !heartDiv.parentNode) {
                     clearInterval(fallInterval);
-                    fHeart.remove();
+                    if(heartDiv.parentNode) heartDiv.remove();
                     return;
                 }
-                topPos += fallSpeed;
-                fHeart.style.top = topPos + 'px';
-
+                topPos += speed;
+                heartDiv.style.top = topPos + 'px';
                 const basketRect = basket.getBoundingClientRect();
-                const heartRect = fHeart.getBoundingClientRect();
-
-                if (
-                    heartRect.bottom >= basketRect.top &&
-                    heartRect.right >= basketRect.left &&
-                    heartRect.left <= basketRect.right &&
-                    heartRect.top <= basketRect.bottom
-                ) {
+                const heartRect = heartDiv.getBoundingClientRect();
+                if (heartRect.bottom >= basketRect.top && heartRect.right >= basketRect.left &&
+                    heartRect.left <= basketRect.right && heartRect.top <= basketRect.bottom) {
                     score++;
-                    scoreDisplay.innerText = score;
+                    scoreSpan.innerText = score;
                     clearInterval(fallInterval);
-                    fHeart.remove();
+                    heartDiv.remove();
                 }
-
-                if (topPos > 350) {
+                if (topPos > gameContainer.clientHeight + 40) {
                     clearInterval(fallInterval);
-                    fHeart.remove();
+                    heartDiv.remove();
                 }
-            }, 20);
+            }, 22);
         }
 
         function endGame() {
-            isPlaying = false;
-            clearInterval(gameInterval);
-            clearInterval(heartSpawnInterval);
+            isGameActive = false;
+            if (gameTimerInterval) clearInterval(gameTimerInterval);
+            if (spawnInterval) clearInterval(spawnInterval);
             gameStartBtn.style.display = 'inline-block';
             gameStartBtn.innerText = "Play Again 🔄";
-
-            let message = "";
-            if (score >= 25) message = `Wow! You caught ${score} hearts! You're a certified lover-pro! 🏆💖`;
-            else if (score >= 12) message = `Great job! You caught ${score} hearts! My heart beats just for you! 🥰`;
-            else message = `You caught ${score} hearts! Don't worry, you've already caught my heart forever! 🔒💝`;
-            
-            gameMessage.innerText = message;
+            let finalMsg = "";
+            if (score >= 25) finalMsg = `Wow! You caught ${score} hearts! You're a certified lover-pro! 🏆💖`;
+            else if (score >= 12) finalMsg = `Great job! You caught ${score} hearts! My heart beats just for you! 🥰`;
+            else finalMsg = `You caught ${score} hearts! Don't worry, you've already caught my heart forever! 🔒💝`;
+            gameMsgDiv.innerText = finalMsg;
         }
 
-        // --- Final Surprise Popups ---
-        const surprisePopupBtn = document.getElementById('surprise-popup-btn');
-        const surpriseModal = document.getElementById('surprise-modal');
+        function startGame() {
+            if (isGameActive) return;
+            // cleanup existing hearts
+            document.querySelectorAll('.falling-heart').forEach(h => h.remove());
+            score = 0;
+            timeLeft = 30;
+            scoreSpan.innerText = score;
+            timerSpan.innerText = timeLeft;
+            gameMsgDiv.innerText = "";
+            gameStartBtn.style.display = 'none';
+            isGameActive = true;
+            basketX = 50;
+            basket.style.left = '50%';
+            gameTimerInterval = setInterval(() => {
+                if (!isGameActive) return;
+                timeLeft--;
+                timerSpan.innerText = timeLeft;
+                if (timeLeft <= 0) endGame();
+            }, 1000);
+            spawnInterval = setInterval(() => { if(isGameActive) spawnHeart(); }, 620);
+        }
 
-        surprisePopupBtn.addEventListener('click', () => {
-            surpriseModal.style.display = 'flex';
-            startConfetti();
+        gameStartBtn.addEventListener('click', startGame);
+
+        // --- Surprise Modal & Confetti ---
+        const surpriseBtn = document.getElementById('surprise-popup-btn');
+        const modalSurprise = document.getElementById('surprise-modal');
+        surpriseBtn.addEventListener('click', () => {
+            modalSurprise.style.display = 'flex';
+            startConfetti(200);
         });
-
-        function closeModal() {
-            surpriseModal.style.display = 'none';
-        }
-
-        window.onclick = function(event) {
-            if (event.target === surpriseModal) closeModal();
-        }
+        window.closeModal = function() {
+            modalSurprise.style.display = 'none';
+        };
+        window.onclick = (e) => { if (e.target === modalSurprise) closeModal(); };
 
         // --- Confetti Engine ---
         const canvas = document.getElementById("confetti-canvas");
-        const ctx = canvas.getContext("2d");
-        let confettiPieces = [];
-
-        function resizeCanvas() {
+        const ctxCanvas = canvas.getContext("2d");
+        let confettiList = [];
+        function resizeCanvasConfetti() {
             canvas.width = window.innerWidth;
             canvas.height = window.innerHeight;
         }
-        window.addEventListener('resize', resizeCanvas);
-        resizeCanvas();
+        window.addEventListener('resize', resizeCanvasConfetti);
+        resizeCanvasConfetti();
 
-        function startConfetti() {
-            confettiPieces = [];
-            for (let i = 0; i < 150; i++) {
-                confettiPieces.push({
+        function startConfetti(pieceCount = 150) {
+            confettiList = [];
+            for (let i = 0; i < pieceCount; i++) {
+                confettiList.push({
                     x: Math.random() * canvas.width,
                     y: Math.random() * canvas.height - canvas.height,
-                    r: Math.random() * 6 + 4,
+                    r: Math.random() * 7 + 4,
                     d: Math.random() * canvas.height,
-                    color: `rgba(${Math.floor(Math.random()*255)}, ${Math.floor(Math.random()*150+100)}, ${Math.floor(Math.random()*200+50)}, 0.8)`,
-                    tilt: Math.random() * 10 - 5,
-                    tiltAngleIncremental: Math.random() * 0.07 + 0.02,
+                    color: `rgba(${Math.floor(Math.random()*255)}, ${Math.floor(Math.random()*150+100)}, ${Math.floor(Math.random()*200+55)}, 0.9)`,
+                    tilt: Math.random() * 12 - 6,
+                    tiltAngleInc: Math.random() * 0.08 + 0.02,
                     tiltAngle: 0
                 });
             }
-            requestAnimationFrame(updateConfetti);
+            requestAnimationFrame(updateConfettiFrame);
         }
 
-        function updateConfetti() {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            let activePieces = 0;
-
-            confettiPieces.forEach((p) => {
-                p.tiltAngle += p.tiltAngleIncremental;
+        function updateConfettiFrame() {
+            if (confettiList.length === 0) return;
+            ctxCanvas.clearRect(0, 0, canvas.width, canvas.height);
+            let active = false;
+            for (let p of confettiList) {
+                p.tiltAngle += p.tiltAngleInc;
                 p.y += (Math.cos(p.d) + 3 + p.r / 2) / 2;
                 p.x += Math.sin(p.tiltAngle);
-                p.tilt = Math.sin(p.tiltAngle - p.r / 2) * 15;
-
-                if (p.y <= canvas.height) activePieces++;
-
-                ctx.beginPath();
-                ctx.lineWidth = p.r;
-                ctx.strokeStyle = p.color;
-                ctx.moveTo(p.x + p.tilt + p.r / 2, p.y);
-                ctx.lineTo(p.x + p.tilt, p.y + p.tilt + p.r / 2);
-                ctx.stroke();
-            });
-
-            if (activePieces > 0) {
-                requestAnimationFrame(updateConfetti);
-            } else {
-                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                p.tilt = Math.sin(p.tiltAngle - p.r / 2) * 14;
+                if (p.y <= canvas.height) active = true;
+                ctxCanvas.beginPath();
+                ctxCanvas.lineWidth = p.r;
+                ctxCanvas.strokeStyle = p.color;
+                ctxCanvas.moveTo(p.x + p.tilt + p.r/2, p.y);
+                ctxCanvas.lineTo(p.x + p.tilt, p.y + p.tilt + p.r/2);
+                ctxCanvas.stroke();
             }
+            if (active) requestAnimationFrame(updateConfettiFrame);
+            else ctxCanvas.clearRect(0, 0, canvas.width, canvas.height);
         }
-        function openVideoLightbox(videoSrc) {
-    const lightbox = document.getElementById("videoLightbox");
-    const video = document.getElementById("lightboxVideo");
-
-    video.src = videoSrc;
-    lightbox.style.display = "flex";
-    video.play();
-}
-
-function closeVideoLightbox() {
-    const lightbox = document.getElementById("videoLightbox");
-    const video = document.getElementById("lightboxVideo");
-
-    video.pause();
-    video.src = "";
-    lightbox.style.display = "none";
-}
     </script>
-
-    <!-- VIDEO LIGHTBOX -->
-<div id="videoLightbox" class="lightbox" onclick="closeVideoLightbox()">
-    <div class="lightbox-content" onclick="event.stopPropagation()">
-        <video id="lightboxVideo" controls autoplay></video>
-    </div>
-</div>
 </body>
 </html>
